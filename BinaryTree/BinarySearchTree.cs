@@ -202,30 +202,6 @@ namespace BinaryTree
             return true;
         }
 
-        public T Minimum()
-        {
-            return Minimum(_head).Value;
-        }
-
-        private Node<T> Minimum(Node<T> node)
-        {
-            if (node.Left == null)
-                return node;
-            return Minimum(node.Left);
-        }
-
-        public T Maximum()
-        {
-            return Maximum(_head).Value;
-        }
-
-        private Node<T> Maximum(Node<T> node)
-        {
-            if (node.Right == null)
-                return node;
-            return Maximum(node.Left);
-        }
-
         public IEnumerator<T> InOrderTraversal()
         {
             if (_head != null)
@@ -314,7 +290,6 @@ namespace BinaryTree
 
         public event SomeActionWithTree NodeAdded;
         public event SomeActionWithTree NodeRemoved;
-
     }
 }
 
